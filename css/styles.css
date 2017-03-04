@@ -1,0 +1,109 @@
+/*********************************************
+Global Layout Set-up
+*********************************************/
+
+* { 
+	box-sizing: border-box;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+	  
+body {
+	text-align: center;
+	font-family: sans-serif;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	line-height: 1.45;
+	background-image: url(../photos/photo-beach.jpg);
+	background-attachment: fixed;
+	background-size: 70%;
+	background-repeat: no-repeat;
+	background-color: white;
+}
+
+.splash {
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.splash .spacer {
+	height: 100%;
+	max-width: 70%;
+}
+	
+.splash .text {
+	text-align: left;
+	max-width: 30%;
+}
+
+.splash h1, .splash p {
+	padding: 0 1.3em 0 1.3em;
+}
+		
+
+.controls {
+	width: 100%;
+	max-width: 1024px;
+	display: flex;
+	margin: 0 auto;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.portfolio {
+	background-color: white;
+	min-height: 100vh;
+}
+
+.portfolio h2 {
+	padding-top: 1.3em;
+}
+
+.gallery {
+	width: 100%;
+	display: flex;
+	margin: 0 auto;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+button {
+  padding: .4em .8em;
+  margin: .4em .8em;
+  background: #666;
+  border: 0;
+  color: #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.mixitup-control-active {
+  background: blue;
+}
+
+a {
+	width: 420px;
+	padding: 30px;
+	border-width: 2px;
+	color: black;
+	text-decoration: none;
+}
+
+a img {
+	width: 100%;
+	opacity: 0.8;
+	box-shadow: 3px 3px 3px grey;
+}
+
+a img:hover {
+	opacity: 1;
+}
+
+
+
+
