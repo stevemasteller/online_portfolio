@@ -28,10 +28,9 @@ body {
 	justify-content: space-between;
 }
 
-.splash h1, .splash p {
-	padding: 0 1.3em 0 1.3em;
+.splash .text {
+	padding: 0 1.3rem;
 }
-		
 
 .controls {
 	width: 100%;
@@ -46,10 +45,6 @@ body {
 	background-color: white;
 	min-height: 100vh;
 	text-align: center;
-}
-
-.portfolio h2 {
-	padding-top: 1.3em;
 }
 
 .gallery {
@@ -119,24 +114,43 @@ a img:hover {
 	color: blue;
 }
 
+/* ================================= 
+  Contact page
+==================================== */
+.contact {
+	height: 100vh;
+	background-color: white;	
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
 
 /* ================================= 
   Squeeze page
 ==================================== */
-
 .squeeze-page {
 	display: none;
 	text-align: center;
 	color: grey;
 	position: fixed;
-	top: 20%;
+	top: 0;
 	width: 100%;
-	height: 60%;
-	z-index: 2;
+	height: 100%;
+	z-index: 1000;
 	background-color: white;
 	border-style: solid;
 	border-color: grey;
 	border-width: 2px 0;
+	padding: 0 1.5rem;
+}
+
+.squeeze-page .squeeze-page-flex-box {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .squeeze-page p {
@@ -144,7 +158,7 @@ a img:hover {
 }
 
 .squeeze-page h1 {
-	font-size: 4rem;
+	font-size: 3rem;
 	margin: -1rem 0 0 0;
 	color: white;
 	text-shadow:	0 1px 0 #ccc,   
@@ -193,6 +207,14 @@ button.opt-out:hover, button.opt-in:hover {
 	width: 100%;
 }
   
+@media screen and (min-width: 760px) {
+  
+	.squeeze-page {
+		top: 20%;
+		height: 60%;
+	}
+}
+
 @media screen and (min-width: 1024px) {
   
 	body {

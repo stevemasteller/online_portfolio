@@ -1,5 +1,19 @@
 
 /************************************************/
+/* Audio Loop                                   */
+/************************************************/
+var loopLimit = 2;
+var loopCounter = 0;
+document.getElementById('loop-limited').addEventListener('ended', function(){
+    if (loopCounter < loopLimit){
+        this.currentTime = 0;
+        this.play();
+        loopCounter++;
+    }
+}, false);   
+
+
+/************************************************/
 /* lightbox (lightgallery) setup                               */
 /************************************************/
 $('.gallery').lightGallery({
@@ -48,24 +62,9 @@ var type2  = malarkey(elem2, opts).pause(9000).type("Hi!. My name is Steve Maste
 var type3  = malarkey(elem3, opts).pause(24000).type("While relatively new to web development and javascript, I have over 20 years experience as a proffessional").pause(1500).delete("fessional",200).type("essional programmer. I believe this experience is reflected in the quality of my code.");
 
 
-/************************************************/
-/* Audio Loop                                   */
-/************************************************/
-var loopLimit = 2;
-var loopCounter = 0;
-document.getElementById('loop-limited').addEventListener('ended', function(){
-    if (loopCounter < loopLimit){
-        this.currentTime = 0;
-        this.play();
-        loopCounter++;
-    }
-}, false);   
-
-
 /*****************************************
 * Display Squeeze Page
 ******************************************/
-
 var displaySqueezePage = function() {
 		$('.squeeze-page').css('display', 'block');			
 }
@@ -73,22 +72,17 @@ var displaySqueezePage = function() {
 // event handler for opt-in button on squeeze page
 $('button.opt-in').click( function() {
 	$('.squeeze-page').css('display', 'none');
+	window.location.href = '#contact-page';
 });
 
 // event handler for opt-out button on squeeze page
 $('button.opt-out').click( function() {
 	$('.squeeze-page').css('display', 'none');
+	window.location.href = '#gallery-page';
 });
 
 /*****************************************
 * implement Squeeze Page
 *****************************************/
-var once = true;
-$(document).on('scroll', function() {
-	if  ($(document).scrollTop() >= 300) {
-		if (once) {
-			once = false;
-			displaySqueezePage();
-		}
-	}
-});
+setTimeout( function() {displaySqueezePage()}, 38000);
+
